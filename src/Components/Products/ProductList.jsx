@@ -22,17 +22,30 @@ import { ImSpinner3 } from "react-icons/im";
             autoplay: true,
             autoplaySpeed: 4000,
             // cssEase: "linear"
-        //    arrows:false,
+           
+        
      
         };
-        const {products,loading}=this.props.products;
-     
-        console.log(this.props);
-        console.log(loading);
-      
+        const {products,loading}=this.props.products;      
         return (
+            <>
+            <style>
+        {`
+          .slick-prev {
+            left: 10px;
+            z-index:9999 !important
+            
+          }
+
+          .slick-next {
+            right: 10px;
+          
+          }
+
+        `}
+      </style>
             <div>
-                <Slider {...settings} className='w-[96%] m-auto'>
+                <Slider {...settings} className='w-[100%] m-auto'>
                     <div>
                         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-23102023-MainBannerDailyChanging-Z1-P3-DillingerTheBeaHouse-min60.jpg" alt="T-shirt" />
                     </div>
@@ -73,6 +86,7 @@ import { ImSpinner3 } from "react-icons/im";
             }
 
             </div>
+            </>
         )
     }
 }

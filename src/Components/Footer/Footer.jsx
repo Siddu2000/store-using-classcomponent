@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { PureComponent } from 'react'
 
-export default class Footer extends Component {
+export default class Footer extends PureComponent {
   render() {
     return (
         <div className='mt-14'>

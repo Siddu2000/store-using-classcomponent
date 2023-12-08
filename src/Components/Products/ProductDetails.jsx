@@ -18,7 +18,6 @@ class ProductDetails extends Component {
     fetch( FETCH_PRODUCT_DETAIL+this.props.id)
       .then(response => response.json())
       .then((data) => {
-        console.log("Product detail Data", data);
         this.setState({ productDetails: data })
       })
 
